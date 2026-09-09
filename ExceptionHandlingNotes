@@ -1,0 +1,60 @@
+current flow
+
+Python is executing
+       ↓
+Something unexpected happens
+       ↓
+Exception occurs
+       ↓
+Program stops
+
+----------------------------
+
+For example :
+
+Check 100 servers
+      ↓
+Server 1 → OK
+Server 2 → OK
+Server 3 → OK
+Server 4 → missing data
+      ↓
+💥 Script crashes
+      ↓
+Servers 5–100 never get checked
+
+---------------------------------
+
+Handle the problem
+---------------------
+
+Check 100 servers
+      ↓
+Server 4 → problem
+      ↓
+Handle the problem
+      ↓
+Continue
+      ↓
+Server 5 → OK
+Server 6 → OK
+...
+
+Syntax
+--------
+try:
+    # code that might fail
+
+except:
+    # what to do if it fails
+
+    situation           try         Except  else
+| ---------------- | --------- | -------- | ------ |
+| No exception     | ✅        | ❌        | ✅  |
+| Exception occurs | Partially | ✅        | ❌    |
+
+# Try → attempt operation
+# Except → handle failure
+# Else → operation succeeded
+# finally → execute no matter what happens
+

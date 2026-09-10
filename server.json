@@ -1,0 +1,6 @@
+{
+    "name": "web-01",
+    "environment": "production",
+    "cpu": 75,
+    "memory": 80
+}

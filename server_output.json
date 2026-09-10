@@ -1,0 +1,6 @@
+{
+    "name": "web-02",
+    "environment": "staging",
+    "cpu": 65,
+    "memory": 70
+}

@@ -1,0 +1,66 @@
+json dictionary
+
+{
+    "name": "web-01",
+    "cpu": 75,
+    "running": true
+}
+
+Python Dictionary
+
+server = {
+    "name": "web-01",
+    "cpu": 75,
+    "running": True
+}
+
+| JSON                     | Python                        |
+| ------------------------ | ----------------------------- |
+| `true`                   | `True`                        |
+| `false`                  | `False`                       |
+| `null`                   | `None`                        |
+| JSON is text/data format | Dictionary is a Python object |
+
+JSON != Python dictionary
+
+JSON is a data format, and Python can convert JSON into dictionaries/lists so we can work with the data.
+
+comversion :
+
+JSON string
+    ↓
+json.loads()
+    ↓
+Python dictionary/list
+
+Json.loads --> take JSON formatted string data and convert it into Python dictionary
+
+Json.loads ---> converts to python dictionary
+Json.dumps ---> converts python dictionary to Json formatted string
+
+Dictinction
+--------------------------------------
+loads() → JSON string → Python object
+dumps() → Python object → JSON string
+
+---------------------------------------
+load()  → JSON file   → Python object   [this will take the open file to make the changes]
+dump()  → Python object → JSON file
+
+| Function       | From → To                   |
+| -------------- | --------------------------- |
+| `json.loads()` | JSON string → Python object |
+| `json.dumps()` | Python object → JSON string |
+| `json.load(open file)`  | JSON file → Python object   |
+| `json.dump()`  | Python object → JSON file   |
+
+             STRING       FILE
+           ┌─────────┐   ┌─────────┐
+JSON → Py  │ loads() │   │ load()  │
+           └─────────┘   └─────────┘
+
+Py → JSON  │ dumps() │   │ dump()  │
+           └─────────┘   └─────────┘
+
+//To create a file with json
+json.dump(WHAT_TO_WRITE, WHERE_TO_WRITE)

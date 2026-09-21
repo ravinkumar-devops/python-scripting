@@ -1,0 +1,62 @@
+# Specific value
+server["name"]
+
+# Keys
+server.keys()
+
+# Values
+server.values()
+
+# Key + value
+server.items()
+
+for key in server.keys():
+    print(key)
+
+To handle the error 
+server.get("ip")
+      ↓
+If key exists → value
+If key doesn't exist → None ✅
+
+|--------------------------------------------------|
+| Method / concept | Purpose                       |
+| ---------------- | ----------------------------- |
+| `server["name"]` | Access a value                |
+| `.get()`         | Safely access an optional key |
+| `.keys()`        | Get all keys                  |
+| `.values()`      | Get all values                |
+| `.items()`       | Get key + value               |
+| `.update()`      | Add/update values             |
+| `.pop()`         | Remove a key/value            |
+| `is None`        | Check for missing value       |
+
+
+-------------------
+list -> []
+Dictionary -> {}
+tuple -> {}
+set -> ()
+
+import json
+
+json_data = '''
+{
+    "name": "web-01",
+    "environment": "production",
+    "spec": {
+        "cpu": 75,
+        "memory": 80,
+        "disk": {
+            "size": 100,
+            "type": "gp3"
+        }
+    }
+}
+'''
+
+To access dictionary inside dictionary
+print(py_dict.get("spec").get("cpu"))
+print(py_dict.get("spec").get("memory"))
+print(py_dict.get("spec").get("disk").get("size"))
+print(py_dict.get("spec").get("disk").get("type"))
